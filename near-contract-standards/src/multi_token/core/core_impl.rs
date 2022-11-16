@@ -427,28 +427,6 @@ impl MultiTokenCore for MultiToken {
                     .mt_resolve_transfer(vec![old_owner], receiver_id, vec![token_id], vec![amount], Some(vec![old_approvals]))
             )
             .into()
-
-        // ext_multi_token_receiver::mt_on_transfer(
-        //     sender_id,
-        //     vec![old_owner.clone()],
-        //     vec![token_id.clone()],
-        //     vec![amount],
-        //     msg,
-        //     receiver_id.clone(),
-        //     NO_DEPOSIT,
-        //     env::prepaid_gas() - GAS_FOR_MT_TRANSFER_CALL,
-        // )
-        // .then(ext_self::mt_resolve_transfer(
-        //     vec![old_owner],
-        //     receiver_id,
-        //     vec![token_id],
-        //     vec![amount],
-        //     Some(vec![old_approvals]),
-        //     env::current_account_id(),
-        //     NO_DEPOSIT,
-        //     GAS_FOR_RESOLVE_TRANSFER,
-        // ))
-        // .into()
     }
 
     fn mt_batch_transfer_call(
