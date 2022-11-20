@@ -1,6 +1,7 @@
 use near_sdk::borsh::{self, BorshDeserialize, BorshSerialize};
 use near_sdk::require;
 use near_sdk::serde::{Deserialize, Serialize};
+use near_sdk::{ext_contract};
 
 /// Version of standard
 pub const MT_METADATA_SPEC: &str = "mt-0.0.1";
@@ -46,6 +47,7 @@ pub struct TokenMetadata {
 }
 
 /// Offers details on the contract-level metadata.
+#[ext_contract(ext_mt_metadata)]
 pub trait MultiTokenMetadataProvider {
     fn mt_metadata(&self) -> MtContractMetadata;
 }
