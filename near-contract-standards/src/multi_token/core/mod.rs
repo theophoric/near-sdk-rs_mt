@@ -12,10 +12,11 @@ pub use self::resolver::MultiTokenResolver;
 
 use crate::multi_token::token::{Token, TokenId};
 use near_sdk::json_types::U128;
-use near_sdk::{AccountId, PromiseOrValue};
+use near_sdk::{AccountId, PromiseOrValue, ext_contract};
 
 /// Describes functionality according to this - https://eips.ethereum.org/EIPS/eip-1155
 /// And this - <https://github.com/shipsgold/NEPs/blob/master/specs/Standards/MultiToken/Core.md>
+#[ext_contract(ext_mt_core)]
 pub trait MultiTokenCore {
     /// Make a single transfer
     ///
