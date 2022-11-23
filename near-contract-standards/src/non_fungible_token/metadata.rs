@@ -41,7 +41,7 @@ pub struct TokenMetadata {
 }
 
 /// Offers details on the contract-level metadata.
-#[ext_contract(ext_nft_metadata)]
+#[ext_contract(ext_nft_contract_metadata)]
 pub trait NonFungibleTokenMetadataProvider {
     fn nft_metadata(&self) -> NFTContractMetadata;
 }
