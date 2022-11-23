@@ -7,5 +7,5 @@ pub mod receiver;
 pub mod resolver;
 pub mod storage_impl;
 
-pub use core_impl::FungibleToken;
+pub use core_impl::{FungibleToken, GAS_FOR_FT_TRANSFER_CALL};
 pub use macros::*;

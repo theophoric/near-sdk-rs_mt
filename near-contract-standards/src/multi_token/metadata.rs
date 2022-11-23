@@ -47,7 +47,7 @@ pub struct TokenMetadata {
 }
 
 /// Offers details on the contract-level metadata.
-#[ext_contract(ext_mt_metadata)]
+#[ext_contract(ext_mt_contract_metadata)]
 pub trait MultiTokenMetadataProvider {
     fn mt_metadata(&self) -> MtContractMetadata;
 }
